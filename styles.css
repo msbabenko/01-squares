@@ -1,0 +1,86 @@
+.wrapper{
+  display: grid;
+  position: absolute;
+}
+
+.board{
+  grid-area: 1/ 1;
+  
+  display: grid;
+  grid-template-columns: 52px auto ;
+  grid-template-rows: 52px auto ;
+}
+
+.playground {
+  grid-area: 2/ 2;
+
+  border-spacing: 2px;
+  border: 1px solid #5dbcd2;
+}
+
+.main-block {
+  background: #5dbcd2;
+  width: 50px;
+  height: 50px;
+}
+
+.block {
+  width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  user-select: none;
+  
+  font-family:monospace;
+  font-size: 1.6rem;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+}
+
+.block:hover{
+  cursor: pointer;
+}
+
+.block:active{
+  border-radius: 2px;
+  box-shadow: 0 0 2px 2px #5dbcd2;
+  
+}
+
+.add-block {
+  background-color: #e9a417;
+  transition: all 0.3s linear;
+}
+.add-block:last-child{
+grid-area: 2 / 1;
+margin-left: 54px;
+}
+
+.add-block:nth-last-child(2){
+grid-area: 1 / 2;
+margin-top: 54px;
+}
+.add-block:hover{
+background-color: #f5bc5e;
+}
+
+.delete-block {
+  background-color: #b72121;
+  transition: all 0.3s linear;
+  display: none;   
+}
+
+.delete-block:first-child{
+  grid-area: 2 / 1;
+  position: relative; 
+ }
+
+.delete-block:nth-child(2){
+  grid-area: 1 / 2;
+  position: relative; 
+}
+
+.delete-block:hover{
+  background-color: #dc4c54;
+}
+
