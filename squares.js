@@ -1,5 +1,5 @@
 class Table {
-  constructor(x = 3, y = 3, root = document.body) {
+  constructor(x = 4, y = 4, root = document.body) {
     if (x > 0 && y > 0) {
       this.wrapper = document.createElement("div");
       this.wrapper.className = "wrapper";
