@@ -75,7 +75,6 @@ class Table {
 
   addColumn = () => {
     let row = this.playground.children;
-    console.log(row.length);
     for (let i = 0; i < row.length; i++) {
       row[i].appendChild(this.block.cloneNode());
     }
@@ -114,7 +113,6 @@ class Table {
   };
 
   hideBlocks = () => {
-    console.log("done");
     this.delButton.forEach((element) => {
       let actualDisplay = getComputedStyle(element).display;
       if (actualDisplay !== "none") {
